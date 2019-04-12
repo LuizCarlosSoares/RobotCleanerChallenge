@@ -13,7 +13,14 @@ namespace Test
             robot.Clean();
             Assert.True(robot.CanMoveToNextPlace);
         }
+        [Fact]
+        public void Cant_move_to_an_out_of_bounds_place()
+        {
+            var office = new Office.OfficeMapGenerator(10,10).Build();
+            var robot = new RobotCleaner.Robot(2);
+            robot.Clean(office.AllNodes)
 
-        
+        }
+
     }
 }

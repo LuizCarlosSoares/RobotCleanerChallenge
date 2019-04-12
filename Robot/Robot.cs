@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Office;
 
 namespace RobotCleaner
 {
@@ -23,6 +24,24 @@ namespace RobotCleaner
 
         public void Clean()
         {
+            reset();
+            for (int i = 0; i < total_actions; i++)
+            {
+                this.currenActions.Add(i);
+            }
+
+            if (currenActions.Count.Equals(total_actions))
+            {
+                this.CanMoveToNextPlace = true;
+                reset();
+            }
+
+        }
+
+        
+        public void Clean(Graph<OfficeTile> room)
+        {
+            
             reset();
             for (int i = 0; i < total_actions; i++)
             {
