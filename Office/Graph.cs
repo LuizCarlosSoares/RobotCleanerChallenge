@@ -5,8 +5,10 @@ using System.Collections.ObjectModel;
 namespace Office
 {
 
-    public  sealed class Graph<T>
+    public sealed class Graph<T>
     {
+        public int Width { get; internal set; }
+        public int Height { get; internal set; }
         public IEnumerable<T> AllNodes { get; }
 
         private IDictionary<T, IEnumerable<T>> Edges;

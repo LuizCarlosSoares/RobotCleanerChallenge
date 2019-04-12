@@ -85,6 +85,8 @@ namespace Office
 
         public Graph<OfficeTile> Build()
         {
+
+
             var edges = new Dictionary<OfficeTile, IEnumerable<OfficeTile>>();
 
             for (var x = 0; x < width; x++)
@@ -96,7 +98,12 @@ namespace Office
                     edges[tile] = CreateEdges(tile);
                 }
             }
-            return new Graph<OfficeTile>(edges);
+            
+            var office = new Graph<OfficeTile>(edges);
+            office.Height = height;
+            office.Width = width;
+
+            return office;
         }
     }
 }

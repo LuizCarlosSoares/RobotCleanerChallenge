@@ -3,10 +3,10 @@ using System.Diagnostics;
 namespace Office
 {
     [DebuggerDisplay("({X}, {Y})")]
-    internal struct Coordinate : IEquatable<Coordinate>
+    public struct Coordinate : IEquatable<Coordinate>
     {
-        internal int X { get; }
-        internal int Y { get; }
+        public int X { get; }
+        public int Y { get; }
 
         public Coordinate(int x, int y)
         {

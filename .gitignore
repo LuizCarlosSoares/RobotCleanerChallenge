@@ -63,3 +63,5 @@ Test/bin/Debug/netcoreapp2.2/Office.pdb
 Robot/bin/Debug/netstandard2.0/Office.dll
 Robot/obj/Debug/netstandard2.0/Robot.csproj.CopyComplete
 Robot/bin/Debug/netstandard2.0/Office.pdb
+Test/.vscode/launch.json
+Test/.vscode/tasks.json
